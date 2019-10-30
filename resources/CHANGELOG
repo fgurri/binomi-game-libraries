@@ -1,2 +1,2 @@
 VERSION 0.1
-- Game, Player, Board class creation
+- Class creation: Game, Player, Board, BoardCell 
