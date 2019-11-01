@@ -1,0 +1,22 @@
+{
+	"circular_board": [
+			{"origin":"1", "destiny":"9", "distance":"8"},
+			{"origin":"6", "destiny":"4", "distance":"2"},
+			{"origin":"15", "destiny":"4", "distance":"5"},
+		],  
+	"clue_board": [
+			{"origin":"16", "destiny":"16", "distance":"0"},
+			{"origin":"16", "destiny":"1", "distance":"1"},
+			{"origin":"1", "destiny":"51", "distance":"5"},
+			{"origin":"1", "destiny":"24", "distance":"3"},
+			{"origin":"53", "destiny":"5", "distance":"6"},
+			{"origin":"82", "destiny":"36", "distance":"1"},
+			{"origin":"82", "destiny":"32", "distance":"2"},
+		],		
+	"linear_board": [
+			{"origin":"1", "destiny":"6", "distance":"5"},
+			{"origin":"5", "destiny":"3", "distance":"2"},
+			{"origin":"3", "destiny":"3", "distance":"0"},
+			{"origin":"2", "destiny":"3", "distance":"1"},
+		],
+}

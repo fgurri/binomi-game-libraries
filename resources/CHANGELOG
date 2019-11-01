@@ -1,2 +1,3 @@
 VERSION 0.1
-- Class creation: Game, Player, Board, BoardCell 
+- Class creation: Game, Player, Board, Cell
+- Tests: TestGame, TestBoard 

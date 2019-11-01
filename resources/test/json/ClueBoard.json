@@ -1,6 +1,7 @@
 {
-    "name": "Clue Board Mapping",
+    "name": "clue_board",
     "expected_max_path_length": "15",
+	"starting_cell": "1", 
     "cells": [
         {"id" : "1", "x" : "400", "y" : "450"},
         {"id" : "2", "x" : "490", "y" : "450"},
