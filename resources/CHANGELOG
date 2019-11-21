@@ -1,3 +1,3 @@
 VERSION 0.1
-- Class creation: Game, Player, Board, Cell
+- Class creation: Game, Player, Board, Cell, Element, Dice, DiceResult
 - Tests: TestGame, TestBoard 

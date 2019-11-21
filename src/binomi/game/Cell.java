@@ -19,6 +19,11 @@ public class Cell {
     private HashMap<Integer, Integer> distances = new HashMap<Integer, Integer>();
     private HashMap<Integer, ArrayList<Cell>> paths = new HashMap<Integer, ArrayList<Cell>>();
     
+    Cell (int id, Board board) {
+    	this.id = id;
+    	this.board	= board;
+    }
+    
     /*
         Phisical board atributes inside Board implementation
     */

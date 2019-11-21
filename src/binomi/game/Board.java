@@ -38,7 +38,7 @@ public class Board {
 	}
 
 	/**
-	 * Builds de current board from json object.
+	 * Builds the current board from json object.
 	 * json object must have attributes:
 	 * - name : String
 	 * - expected_max_path_lenght : int
@@ -67,8 +67,7 @@ public class Board {
 				int id = Integer.parseInt(jsonobject.getString("id"));
 				int x = Integer.parseInt(jsonobject.getString("x"));
 				int y = Integer.parseInt(jsonobject.getString("y"));
-				Cell cell = new Cell();
-				cell.setId(id);
+				Cell cell = new Cell(id, this);
 				cell.setX(x);
 				cell.setY(y);
 

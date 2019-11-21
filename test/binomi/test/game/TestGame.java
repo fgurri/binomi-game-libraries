@@ -5,9 +5,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import javax.annotation.Resources;
+
 import org.apache.commons.io.FileUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -16,7 +23,7 @@ import binomi.game.*;
 public class TestGame{
 
 	@Test
-	public void testGameConstructor(){
+	public void testDefaultGameConstructor(){
 		String game_name = "Testing game";
 		Player player1 = new Player(1, "Guiligait de planets");
 		Player player2 = new Player(2, "Chupiter alains guit mars");
@@ -50,6 +57,28 @@ public class TestGame{
 		// we should be at start of turn 4
 		assertTrue(game.getTurn_number() == 4);
 		assertTrue(game.getPlayer_current().equals(players_sorted.get(0)));
+		
+		// test some dice throws
+		for (int i = 0; i < 100; i++) {
+			int result = game.throwDices().getNumericResult();
+			assertTrue(result >= 2 && result <=12);
+		}
+		
+		// load resources
+		try {
+			game.loadResourceFromJSON(new JSONObject(FileUtils.readFileToString(Paths.get(TestBoard.class.getResource("/test/json/LoadResources.json").toURI()).toFile(), "utf-8")));
+			ArrayList<Resource> cards = game.getResources(Resource.RESOURCE_DRAWABLE_CARD);
+			assertTrue(cards.size() == 7);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
